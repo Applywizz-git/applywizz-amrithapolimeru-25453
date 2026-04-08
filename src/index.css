@@ -1,0 +1,214 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 140 25% 98%;
+    --foreground: 150 15% 15%;
+
+    --card: 140 20% 96%;
+    --card-foreground: 150 15% 15%;
+
+    --popover: 140 25% 98%;
+    --popover-foreground: 150 15% 15%;
+
+    --primary: 150 25% 15%;
+    --primary-foreground: 140 25% 98%;
+
+    --secondary: 140 30% 92%;
+    --secondary-foreground: 150 25% 15%;
+
+    --muted: 140 10% 93%;
+    --muted-foreground: 150 15% 40%;
+
+    --accent: 45 40% 88%;
+    --accent-foreground: 151 25% 12%;
+
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 15% 90%;
+    --input: 150 15% 90%;
+    --ring: 150 25% 15%;
+
+    --radius: 1.5rem;
+
+    --leaf-dark: 150 25% 15%;
+    --leaf-dark-foreground: 140 25% 98%;
+    --leaf-light: 140 25% 98%;
+    --leaf-light-foreground: 150 25% 15%;
+
+    --glass: 140 25% 99% / 0.5;
+    --glass-border: 150 20% 92% / 0.4;
+    --glow-primary: 150 25% 20%;
+    --glow-accent: 45 40% 85%;
+
+    --peace-grad-1: 45 40% 94%;
+    --peace-grad-2: 140 30% 94%;
+
+    --sidebar-background: 140 20% 98%;
+    --sidebar-foreground: 150 15% 20%;
+    --sidebar-primary: 140 30% 92%;
+    --sidebar-primary-foreground: 150 15% 15%;
+    --sidebar-accent: 45 40% 90%;
+    --sidebar-accent-foreground: 150 15% 15%;
+    --sidebar-border: 140 15% 92%;
+    --sidebar-ring: 140 30% 80%;
+  }
+
+  .dark {
+    --background: 150 25% 10%;
+    --foreground: 45 40% 88%;
+
+    --card: 151 25% 14%;
+    --card-foreground: 45 40% 92%;
+
+    --popover: 150 25% 10%;
+    --popover-foreground: 45 40% 92%;
+
+    --primary: 45 40% 88%;
+    --primary-foreground: 150 25% 10%;
+
+    --secondary: 150 20% 18%;
+    --secondary-foreground: 45 40% 88%;
+
+    --muted: 150 15% 16%;
+    --muted-foreground: 150 10% 65%;
+
+    --accent: 140 30% 92%;
+    --accent-foreground: 150 25% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 150 20% 18%;
+    --input: 150 20% 18%;
+    --ring: 45 40% 88%;
+
+    --radius: 1.5rem;
+
+    --leaf-dark: 45 40% 88%;
+    --leaf-dark-foreground: 150 25% 10%;
+    --leaf-light: 45 40% 88%;
+    --leaf-light-foreground: 150 25% 10%;
+
+    --glass: 150 25% 8% / 0.7;
+    --glass-border: 150 20% 20% / 0.5;
+    --glow-primary: 45 40% 50%;
+    --glow-accent: 140 30% 50%;
+
+    --peace-grad-1: 150 25% 14%;
+    --peace-grad-2: 151 20% 12%;
+
+    --sidebar-background: 150 25% 10%;
+    --sidebar-foreground: 45 40% 88%;
+    --sidebar-primary: 45 40% 88%;
+    --sidebar-primary-foreground: 150 25% 10%;
+    --sidebar-accent: 150 20% 18%;
+    --sidebar-accent-foreground: 45 40% 88%;
+    --sidebar-border: 150 20% 20%;
+    --sidebar-ring: 45 40% 88%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/60 backdrop-blur-xl border border-border/50 shadow-lg;
+  }
+
+  .glass-card-strong {
+    @apply bg-card/80 backdrop-blur-2xl border border-border/60 shadow-xl;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 60px -12px hsl(var(--glow-primary) / 0.4);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 40px -8px hsl(var(--glow-accent) / 0.3);
+  }
+
+  .section-padding {
+    @apply py-20 md:py-28 lg:py-32 px-4 sm:px-6 lg:px-8;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-foreground to-accent;
+  }
+
+  .peace-bg {
+    background: radial-gradient(circle at top right, hsl(var(--peace-grad-1)), transparent),
+      radial-gradient(circle at bottom left, hsl(var(--peace-grad-2)), transparent),
+      hsl(var(--background));
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 2s;
+  }
+
+  .animate-morph {
+    animation: morph 8s ease-in-out infinite;
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes morph {
+
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+
+  50% {
+    border-radius: 50% 60% 30% 60% / 30% 50% 70% 50%;
+  }
+
+  75% {
+    border-radius: 60% 30% 50% 40% / 60% 40% 60% 30%;
+  }
+}
