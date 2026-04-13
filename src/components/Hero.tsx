@@ -103,7 +103,7 @@ const Hero = () => {
                 <motion.a
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
-                  href="/resume_amritha-polimeru_wda.pdf"
+                  href="/amritha_polimeru.pdf"
                   download="resume_amritha-polimeru.pdf"
                   className="bg-primary text-primary-foreground px-6 py-3.5 rounded-full text-sm font-semibold inline-flex items-center gap-2 hover:opacity-90 transition-all shadow-sm"
                 >
