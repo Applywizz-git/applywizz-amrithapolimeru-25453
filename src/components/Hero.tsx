@@ -1,7 +1,7 @@
 import { motion, useMotionValue, useTransform, useSpring } from "framer-motion";
 import { ArrowUpRight, Mail, Sparkles, Download } from "lucide-react";
 import { useEffect, useRef } from "react";
-import profileImg from "/profile_image_women.png";
+import profileImg from "/amritha.jpeg";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
