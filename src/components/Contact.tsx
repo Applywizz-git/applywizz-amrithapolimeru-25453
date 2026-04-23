@@ -46,7 +46,7 @@ const Contact = () => {
                 </div>
                 +1 (469) 347-7215
               </a>
-              <a href="https://www.linkedin.com/in/amritha-polimeru/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://www.linkedin.com/in/amrithap29/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
                 <div className="w-10 h-10 rounded-xl bg-primary/40 flex items-center justify-center">
                   <Linkedin className="w-4 h-4 text-foreground" />
                 </div>
